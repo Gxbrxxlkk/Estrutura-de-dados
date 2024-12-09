@@ -1,60 +1,73 @@
-/*** 
- * UFMT - Universidade Federal de Mato Grosso
- * Estrutura de dados I
- * Professor Ivairton
+/*
+* UFMT - Universidade Federal de Mato Grosso
+* Professor Ivairton
+* Estrutura de dados 1
+*/
+
+/* Operadores logicos
+* && AND
+* || OR
+* ! NOT
+* ^ OR exclusivo
+* ~ Complemento de um
+* >> deslocamento para à esquerda
+* << deslocamento para à direita
+* Tudo que não é zero é verdadeiro
+* # Diretriz de pré compilação, vem fora da main
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 
 int main() {
-    int idade;
-    printf("Informe sua idade: ");
-    scanf("%d", &idade);
-    if (idade >= 18) {
-        printf("Você é maior de idade. \n");
-    } else {
-        printf("Você é menor de idade. \n");
-    }
-    printf("Vamos fazer uma contagem agora\n");
-    int contador;
 
-    contador = 1;
-    while (contador <= 5) {
-        printf("Contando... %d\n", contador);
-        //contador += 2; O ++ sempre vai aumentar uma unidade, quando for aumentar ou decrementar mais de uma unidade, usar esse
-        contador ++;
+    int vetor[5], vetor2[5], vetresult[5], i, result,tamanhovet, valor, vetpot[5];
+
+    for (i = 0; i < 5 ; i++) {
+        vetor[i] = 0;
+    }
+    for (i = 0; i < 5 ; i++)
+    {
+        printf("Insira um valor inteiro: ");
+        scanf("%d", &valor);
+        vetor[i] = valor;
+    }
+    for ( i = 0; i < 5; i++)
+    {
+        printf("Insira os valores do segundo vetor: ");
+        scanf("%d", &valor);
+        vetor2[i] = valor;
+    }
+    for (i = 0 ; i < 5; i++) {
+
+        vetresult[i] = vetor[i] +  vetor2[i];
+        printf("O valor da soma no indice %d é: %d \n", i, vetresult[i]);
+    }
+    int menor = vetresult[0];
+    for ( i = 0; i < 5; i++)
+    {
+        if (vetresult[i] < menor) {
+            menor = vetresult[i];
+        }
+    }
+    int maior = vetresult[0];
+    for ( i = 0; i < 5; i++)
+    {
+        if (vetresult[i] > maior) {
+            maior = vetresult[i];
+        }
+    }
+    printf("O menor valor do vetor resultante é %d e o maior é %d\n", menor,maior);
+
+    for ( i = 0; i < 5; i++)
+    {
+        tamanhovet = 5;
+            vetpot[i] = vetor[i] + vetor2[tamanhovet-1];
+            printf("a soma das pontas é: %d \n ",vetpot[i]);
+        
+        
     }
     
-    for ( ; contador >= 0; contador--) {
-        printf("Contando... %d\n", contador);
-    } 
-
-    int voto;
-    voto = 1;
-    switch (voto) {
-    case 1:
-        printf("Voce votou em 1");
-        break;
-    case 2:
-        printf("Voce votou em 2");
-        break;
-    case 3:
-        printf("Voce votou em 3");
-        break;
-    default:
-        printf("Voce votou nulo");
-        break;
-    }
-
- //   printf("Imprimindo com o while\n");
-   // contador = 5;
-  //  do {
-   //     printf("Contando... %d\n", contador);
-   //     
-   // } while (/* condition */);
-    
-
-
-    return 0;
+       
+    return 1;
 }
