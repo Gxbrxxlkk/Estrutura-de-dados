@@ -51,9 +51,29 @@ if ((*fl) == NULL) {
 }
 
 }
-int removefila(tipo_no**);
+int removefila(tipo_no**){
+    tipo_no *aux;
+    int aux_valor;
+    if ((*fl) != NULL)
+    {
+        aux = *fl;
+        aux_valor = aux->valor;
+        (*fl) = (*fl)->prox;
+        free(aux);
+        return aux_valor;
+    }
+    return -1;
+}
 int primeirofila(tipo_no*);
-int imprimefila(tipo_no*);
+int imprimefila(tipo_no*) {
+    printf("FIla=>");
+    while (fl != NULL)
+    {
+        printf("[%d|->]", fl->valor);
+        fl = fl->prox;
+    }
+    printf("[NULO]\n")
+}
 
 int main() {
 tipo_no *fila;
