@@ -1,0 +1,14 @@
+Metodo de ordenação "Bolha" (Complexidade Big - O (n²))
+
+=> Lista "Desordenada", com alocação estática.
+Recupere a implementação de Lista.
+
+Lista:
+[7][4][1][3][2][5][6]
+ |  |
+ Verifica se esses dois estão em ordem, se não, troca de lugar
+ [4][7][1][3][2][5][6]
+     |  |
+ Verifica se esses dois estão em ordem, assim adiante...
+ Enquanto houver troca, percorrer todo o vetor e fazer a ordenação.
+ Caso percorrer o vetor e não ter nenhuma mudança, acabou o processo de sorteamento
