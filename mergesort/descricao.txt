@@ -1,0 +1,17 @@
+Merge sort O(n.log(n))
+
+Função recursiva
+Entregue a lista, a posição da esqueda e a posição da direita.
+Dividir a lista até que pos.esqueda seja igual pos.direita (divida no meio, chamada p/metade 1 e 2)
+
+Após a divisão, Faça a uniao entre as duas metades. ordenando
+
+while(pos esqueda != pos direita){
+    funcao recursiva?
+}
+posição
+0    1   2  3   4    5   6   7   8   9
+[9] [5] [7] [1] [4] [2] [2] [8] [5] [5] 
+
+tam = 10
+metade = tam-1 /2
